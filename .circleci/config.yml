@@ -60,7 +60,7 @@ jobs:
           at : /tmp/workspace
       - run:
           name: "Say my name"
-          command: "cat file.txt | echo"
+          command: "cat /tmp/workspace/file.txt | echo"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
