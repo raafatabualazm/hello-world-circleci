@@ -72,4 +72,6 @@ workflows:
          requires:
            - say-hello
       - save-file
-      - read-file
+      - read-file:
+         requires:
+           - save-file
