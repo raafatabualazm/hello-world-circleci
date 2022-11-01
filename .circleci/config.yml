@@ -42,11 +42,11 @@ jobs:
     steps:
       - run:
           name: "Say my name"
-          command: "mkdir /tmp/workspace; echo saved! > file.txt"
+          command: "mkdir /tmp/workspace; echo saved! > /tmp/workspace/file.txt"
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
-            - ./file.txt
+            - file.txt
   
   read-file:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
