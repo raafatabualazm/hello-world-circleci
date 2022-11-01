@@ -42,7 +42,7 @@ jobs:
     steps:
       - run:
           name: "Say my name"
-          command: "echo saved! > file.txt"
+          command: "mkdir /tmp/workspace; echo saved! > file.txt"
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
