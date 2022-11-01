@@ -71,4 +71,5 @@ workflows:
       - say-world:
          requires:
            - say-hello
-      - say-name
+      - save-file
+      - read-file
