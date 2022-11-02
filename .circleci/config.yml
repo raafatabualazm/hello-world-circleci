@@ -45,7 +45,8 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - say-my-name
+      - say-my-name:
+        to: "Raafat"
 
   save-file:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
