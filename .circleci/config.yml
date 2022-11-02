@@ -77,6 +77,19 @@ jobs:
       - run:
           name: "Say my name"
           command: "cat /tmp/workspace/file.txt"
+  will-fail:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: cat nonexitentfile.txt
+  
+  handler:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: 
+          command: echo "Hello Error!"
+          when: on_fail
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
