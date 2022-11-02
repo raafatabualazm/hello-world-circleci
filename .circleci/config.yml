@@ -105,3 +105,5 @@ workflows:
       - read-file:
          requires:
            - save-file
+      - will-fail
+      - handler
